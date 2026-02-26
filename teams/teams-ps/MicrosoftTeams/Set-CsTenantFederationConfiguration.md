@@ -314,7 +314,7 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 When set to True (the default value) users will be potentially allowed to communicate with users from other domains.
-If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the `AllowedDomains` and `BlockedDomains` properties or any `ExternalAccessPolicy` instances. In effect, the `AllowFederatedUsers` property serves as a master switch that globally enables or disables federation across the Tenant, overridding all other policy settings. 
+If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the `AllowedDomains` and `BlockedDomains` properties or any `ExternalAccessPolicy` instances. In effect, the `AllowFederatedUsers` property serves as a master switch that globally enables or disables federation across the Tenant, overriding all other policy settings. 
 
 To block all domains while selectively allowing specific users to communicate externally via explicit `ExternalAccessPolicy` instances, set `AllowFederatedUsers` to `True` and leave the `AllowedDomains` property empty.
 
@@ -476,7 +476,7 @@ When set to True, users in the tenant who have `EnableFederationAccess` set to F
 
 The `ApplyExternalAccessRestrictionsToChatMembership` parameter does not affect the behavior set by `CommunicationWithExternalOrgs` parameter of the `ExternalAccessPolicy`.
 > [!NOTE]
-> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy]/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
 
@@ -504,11 +504,11 @@ When set to False (the default value), **only the initiator of the group chat an
 When set to True, **all participants in the group chat must have mutual federation relationships with every other participant in the chat**. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats when required relationships are no longer valid. 
 
 > [!NOTE]
-> This setting only applies to group chats and does not affect a users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active.
 >
-> The user who initiated the chat is never removed from the group chat as a result of this seting.
+> The user who initiated the chat is never removed from the group chat as a result of this setting.
 
 ```yaml
 Type: ExtendMutualFederationForChatMembership
@@ -545,7 +545,7 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 Specifies the collection of tenant federation configuration settings to be modified.
-Because each tenant is limited to a single, global collection of federation settings there is no need include this parameter when calling the `Set-CsTenantFederationConfiguration` cmdlet.
+Because each tenant is limited to a single, global collection of federation settings there is no need to include this parameter when calling the `Set-CsTenantFederationConfiguration` cmdlet.
 If you do choose to use the Identity parameter you must also include the Tenant parameter.
 For example:
 
