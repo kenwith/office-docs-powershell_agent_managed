@@ -404,19 +404,22 @@ If you made the application multitenant for **Exchange Online** delegated scenar
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin).
 
-### Step 5: Assign Microsoft Entra roles to the application
+### Step 5: Assign role permissions to the application
 
-You have two options:
+You have a few options depending on what your goal is:
 
-- **Assign Microsoft Entra roles to the application**
-- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+ **Option 1. Assign Microsoft Entra roles to the application**: This method will utilize built-in Entra roles to grant all the permissions associated with that role. These roles cannot be customized or scoped.
+ 
+ **Option 2. Assign custom role groups to the application using service principals**: This method is recommended if you need to restrict the commands that are available to your application and/or if you need to utilize a Write scope to limit which recipients can be modified. If you choose to use this option, do not assign Microsoft Entra Roles or your application will end up having more permissions than desired. This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+
+ **Option 3. Combine Microsoft Entra roles together with custom role groups**: This method is recommended if you want to extend a built-in Microsoft Entra role such as the "Exchange Recipient Administrator" role and also grant additional permissions from a custom role that is not available to the "Exchange Recipient Administrator" Entra role. If you choose to use this option please follow the instructions from both options below.
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+> It is important to remember that RBAC is cumulative, meaning it combines permissions from all sources. If you decide to assign custom role groups and you also assign Microsoft Entra ID roles to the application, we will combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
 >
 > For multitenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
-#### Assign Microsoft Entra roles to the application
+#### Option 1: Assign Microsoft Entra roles to the application
 
 The supported Microsoft Entra roles are described in the following table:
 
@@ -487,7 +490,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
 
-#### Assign custom role groups to the application using service principals
+#### Option 2: Assign custom role groups to the application using service principals
 
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell doesn't work (your Azure App ID and Object ID are needed to create the new service principal).
