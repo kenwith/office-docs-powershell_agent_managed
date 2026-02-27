@@ -4,7 +4,6 @@ ms.date: 01/22/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin

@@ -4,7 +4,6 @@ ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: f969816a-2607-4655-9d47-9e8767fb5633
 search.appverid: MET150
