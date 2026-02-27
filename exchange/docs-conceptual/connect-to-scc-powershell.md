@@ -1,6 +1,5 @@
 ---
 title: Connect to Security & Compliance PowerShell
-author: chrisda
 ms.date: 12/05/2025
 ms.audience: Admin
 audience: Admin

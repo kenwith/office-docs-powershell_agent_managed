@@ -1,7 +1,5 @@
 ---
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
-ms.author: chrisda
-author: chrisda
 ms.date: 12/05/2025
 ms.audience: Admin
 audience: Admin

@@ -1,7 +1,5 @@
 ---
 title: "Filterable properties for the Filter parameter"
-ms.author: chrisda
-author: chrisda
 ms.date: 1/9/2024
 ms.audience: ITPro
 audience: ITPro

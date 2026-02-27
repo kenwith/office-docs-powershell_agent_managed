@@ -1,7 +1,5 @@
 ---
 title: "Open the Exchange Management Shell"
-ms.author: chrisda
-author: chrisda
 ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro

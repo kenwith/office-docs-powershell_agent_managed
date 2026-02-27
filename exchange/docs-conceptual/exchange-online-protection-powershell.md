@@ -1,7 +1,5 @@
 ---
 title: "PowerShell for the Built-in security add-on for on-premises mailboxes"
-ms.author: chrisda
-author: chrisda
 ms.date: 12/16/2025
 ms.audience: Admin
 audience: Admin

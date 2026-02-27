@@ -1,7 +1,5 @@
 ---
 title: "Exchange cmdlet syntax"
-ms.author: chrisda
-author: chrisda
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin

@@ -1,7 +1,5 @@
 ---
 title: "Filterable properties for the RecipientFilter parameter"
-ms.author: chrisda
-author: chrisda
 ms.date: 09/07/2023
 ms.audience: ITPro
 audience: ITPro

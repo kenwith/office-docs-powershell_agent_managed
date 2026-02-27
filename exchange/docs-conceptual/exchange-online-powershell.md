@@ -1,7 +1,5 @@
 ---
 title: "Exchange Online PowerShell"
-ms.author: chrisda
-author: chrisda
 ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin

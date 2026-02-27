@@ -1,6 +1,5 @@
 ---
 title: Connect to Exchange Online PowerShell
-author: chrisda
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin

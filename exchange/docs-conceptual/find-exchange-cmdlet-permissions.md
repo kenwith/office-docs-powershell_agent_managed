@@ -1,7 +1,5 @@
 ---
 title: "Find the permissions required to run any Exchange cmdlet"
-ms.author: chrisda
-author: chrisda
 ms.date: 06/06/2024
 ms.audience: ITPro
 audience: ITPro

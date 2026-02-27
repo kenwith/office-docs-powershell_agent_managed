@@ -1,7 +1,5 @@
 ---
 title: Filters in the Exchange Online PowerShell module
-ms.author: chrisda
-author: chrisda
 ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin
