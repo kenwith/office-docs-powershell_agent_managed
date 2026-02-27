@@ -232,7 +232,7 @@ Key                 Value
 TelephoneNumber     +12065555555
 ```
 
-This example returns the status of a success Number Usage Update order.
+This example returns the status of a successful Number Usage Update order.
 
 ## PARAMETERS
 
