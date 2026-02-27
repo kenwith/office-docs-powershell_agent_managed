@@ -2,7 +2,6 @@
 title: "Enable or disable access to Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: orspodek
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin

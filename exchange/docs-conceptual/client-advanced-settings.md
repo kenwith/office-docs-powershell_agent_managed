@@ -2,7 +2,6 @@
 title: PowerShell advanced settings for Microsoft Purview Information Protection client
 ms.author: yangczhang
 author: zhang-yangchen
-manager: aashishr
 ms.date: 04/17/2024
 ms.audience: Admin
 audience: Admin
